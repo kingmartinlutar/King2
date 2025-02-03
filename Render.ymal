@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: content-bridge-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    env:
+      BOT_TOKEN: $BOT_TOKEN
+      API_ID: $API_ID
+      API_HASH: $API_HASH
+      MONGO_URI: $MONGO_URI
+      ADMINS: $ADMINS
+      ENCRYPTION_KEY: $ENCRYPTION_KEY
